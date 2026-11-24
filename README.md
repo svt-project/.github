@@ -5,11 +5,12 @@ This repository owns the public organization profile and shared project guidance
 
 - [Organization profile](profile/README.md)
 - [Coordination issues](https://github.com/svt-project/.github/issues)
-- [Specification, .NET library, and CLI](https://github.com/svt-project/svt-dotnet)
+- [Specification and canonical reference assets](https://github.com/svt-project/svt-spec)
+- [.NET library and CLI](https://github.com/svt-project/svt-dotnet)
 
 The specification defines the template contract. The .NET library and CLI let applications inspect
-templates and bind replacement values. Conformance fixtures and authoring examples support
-implementation and template development.
+templates and bind replacement values. The specification publishes canonical reference assets;
+implementations embed explicitly accepted, stamped copies. Authoring examples support template development.
 
 This repository provides the organization profile and shared project guidance. Format rules and
 implementation documentation live with their respective projects; GitHub issues hold proposals and
