@@ -5,7 +5,7 @@ This repository owns the public organization profile and shared project guidance
 
 - [Organization profile](profile/README.md)
 - [Coordination issues](https://github.com/svt-project/.github/issues)
-- [Current specification and .NET implementation](https://github.com/bathos-labs/svt-dotnet)
+- [Current specification and .NET implementation](https://github.com/svt-project/svt-dotnet)
 
 The specification, conformance fixtures, and cookbook will belong in `svt-spec`. The library, CLI,
 and implementation-specific documentation belong in `svt-dotnet`. This repository is the project
