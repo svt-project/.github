@@ -1,17 +1,21 @@
 # SVT organization repository
 
 This repository owns the public organization profile and shared project guidance for
-**Scalable Vector Templates**. The default branch is `master`.
+**Scalable Vector Templates**, a specification for named text, color, and image inputs in SVG artwork.
 
 - [Organization profile](profile/README.md)
 - [Coordination issues](https://github.com/svt-project/.github/issues)
-- [Current specification and .NET implementation](https://github.com/svt-project/svt-dotnet)
+- [Specification, .NET library, and CLI](https://github.com/svt-project/svt-dotnet)
 
-The specification, conformance fixtures, and cookbook will belong in `svt-spec`. The library, CLI,
-and implementation-specific documentation belong in `svt-dotnet`. This repository is the project
-entry point and coordination home; it does not define format behavior.
+The specification defines the template contract. The .NET library and CLI let applications inspect
+templates and bind replacement values. Conformance fixtures and authoring examples support
+implementation and template development.
 
-Use GitHub issues for proposals and delivery tracking. Keep workstation relocation notes, backups,
-and agent-session data local; `.local/` is ignored for that purpose.
+This repository provides the organization profile and shared project guidance. Format rules and
+implementation documentation live with their respective projects; GitHub issues hold proposals and
+delivery tracking.
+
+The default branch is `master`. Keep workstation notes, backups, and agent-session data local;
+`.local/` is ignored for that purpose.
 
 Repository-authored content is MIT-licensed. See [LICENSE](LICENSE).
