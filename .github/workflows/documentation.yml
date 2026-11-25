@@ -1,0 +1,32 @@
+name: Validate documentation
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: validation-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  documentation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+      - name: Install Markdown tools
+        run: >-
+          npm install --no-save --no-package-lock --ignore-scripts --no-audit --no-fund
+          remark-cli@12.0.1 remark-gfm@4.0.1 remark-validate-links@13.1.0
+          remark-lint-no-undefined-references@5.0.2
+      - name: Check tracked Markdown and local links
+        run: >-
+          git ls-files -z '*.md' | xargs -0 node_modules/.bin/remark
+          --use remark-gfm --use remark-validate-links
+          --use remark-lint-no-undefined-references --frail --no-stdout
